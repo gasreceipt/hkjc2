@@ -3,9 +3,9 @@ import { Button } from "./components/ui/Button.jsx";
 
 const navItems = [
   { to: "/", label: "Live Odds", end: true },
-  { to: "/news", label: "AI Insights" },
-  { to: "/archive", label: "Racing History" },
-  { to: "/settings", label: "Bot Access" },
+  { to: "/races", label: "Race Cards" },
+  { to: "/archive", label: "Data Archive" },
+  { to: "/news", label: "Race Notes" },
 ];
 
 export default function Layout({ children }) {
@@ -29,7 +29,7 @@ export default function Layout({ children }) {
                       "border-b py-1 text-xs font-bold transition",
                       isActive
                         ? "border-gold text-gold"
-                        : "border-transparent text-muted hover:text-porcelain",
+                        : "border-transparent text-muted hover:border-gold hover:text-gold",
                     ].join(" ")
                   }
                 >
@@ -41,10 +41,10 @@ export default function Layout({ children }) {
 
           <div className="flex shrink-0 items-center gap-2">
             <Button asChild variant="gold" size="sm">
-              <NavLink to="/settings">Connect Bot</NavLink>
+              <NavLink to="/races">Open Odds</NavLink>
             </Button>
             <Button asChild size="sm">
-              <NavLink to="/races">Join Club</NavLink>
+              <NavLink to="/settings">Data Setup</NavLink>
             </Button>
           </div>
         </div>
