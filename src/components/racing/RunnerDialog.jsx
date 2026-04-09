@@ -1,12 +1,10 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { Button } from "../ui/Button.jsx";
 
-export function RunnerDialog({ runner }) {
+export function RunnerDialog({ runner, open, onOpenChange, children }) {
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <Button variant="ghost" size="sm">Details</Button>
-      </Dialog.Trigger>
+    <Dialog.Root open={open} onOpenChange={onOpenChange}>
+      {children ? <Dialog.Trigger asChild>{children}</Dialog.Trigger> : null}
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-40 bg-black/70" />
         <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[min(92vw,520px)] -translate-x-1/2 -translate-y-1/2 rounded-md border border-gold/25 bg-charcoal p-6 shadow-2xl">
