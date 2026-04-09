@@ -24,3 +24,10 @@ htmlcov/
 *.joblib
 .DS_Store
 .env
+
+# Custom ignores
+node_modules/
+tmp*.json
+tunnel*.txt
+*.html
+cloudflared.exe
