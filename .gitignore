@@ -30,4 +30,5 @@ node_modules/
 tmp*.json
 tunnel*.txt
 *.html
+!index.html
 cloudflared.exe
