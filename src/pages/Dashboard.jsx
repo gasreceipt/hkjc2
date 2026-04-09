@@ -104,8 +104,8 @@ function Hero() {
             Race data terminal active
           </div>
           <h1 className="max-w-5xl text-5xl font-black uppercase leading-none text-porcelain sm:text-7xl lg:text-8xl">
-            HKJC Race Odds
-            <span className="block text-gold">At A Glance</span>
+            HKJC - Max and Lee
+            <span className="block text-gold">AI Odds At A Glance</span>
           </h1>
           <p className="mt-7 max-w-2xl text-sm leading-6 text-muted sm:text-base">
             Quickly scan live race cards, runner odds, meeting conditions, archive context, and

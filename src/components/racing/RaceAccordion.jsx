@@ -34,17 +34,17 @@ export function RaceAccordion({ races }) {
             </Accordion.Header>
             <Accordion.Content className="border-t border-white/10 px-5 py-4">
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[860px] border-collapse text-sm">
+                <table className="w-full min-w-[920px] border-collapse text-sm">
                   <thead>
                     <tr className="text-left text-xs uppercase text-muted">
                       <th className="pb-3">No.</th>
                       <th className="pb-3">Runner</th>
-                      <th className="pb-3">Jockey</th>
-                      <th className="pb-3">Draw</th>
                       <th className="pb-3">Odds</th>
+                      <th className="pb-3">Trainer</th>
+                      <th className="pb-3">Jockey</th>
                       <th className="pb-3">Confidence</th>
                       <th className="pb-3">Edge</th>
-                      <th className="pb-3"></th>
+                      <th className="pb-3 text-right">Details</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -57,15 +57,15 @@ export function RaceAccordion({ races }) {
                         </td>
                         <td className="py-3">
                           <p className="font-bold text-porcelain">{runner.name}</p>
-                          <p className="max-w-72 truncate text-xs text-muted">{runner.note}</p>
+                          <p className="text-xs text-muted">Draw {runner.draw} · Rating {runner.rating}</p>
                         </td>
-                        <td className="py-3 text-muted">{runner.jockey}</td>
-                        <td className="py-3 text-porcelain">{runner.draw}</td>
                         <td className="py-3">
                           <span className="odds-chip rounded-md border border-gold/30 bg-gold px-3 py-2 font-black text-ink">
                             {runner.odds.toFixed(1)}
                           </span>
                         </td>
+                        <td className="py-3 text-muted">{runner.trainer}</td>
+                        <td className="py-3 text-muted">{runner.jockey}</td>
                         <td className="py-3">
                           <div className="h-2 w-32 rounded-md bg-ink">
                             <div
