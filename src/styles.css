@@ -100,3 +100,13 @@ textarea {
 .odds-chip {
   box-shadow: inset 0 1px 0 rgba(248, 243, 232, 0.14), 0 10px 28px rgba(0, 0, 0, 0.24);
 }
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
